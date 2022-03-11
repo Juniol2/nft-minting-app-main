@@ -179,7 +179,7 @@ nav a:hover:before{
 /*------------------------End menu bar----------------------------------------------*/ 
 
 /*------------------------Start left Text----------------------------------------------*/ 
-.left{ background: #d81c1c; }
+.left{ background: #000000; }
 .testimonial .pic{
     width: 22%;
     padding: 20px 0;
