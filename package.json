@@ -22,11 +22,9 @@
     "web3": "^1.6.1",
     "web3-eth-contract": "^1.5.2"
   },
-  
   "browser": {
     "crypto": false
-},
-
+  },
   "author": "Ali Solanki, Daniel Eugene Botha",
   "license": "MIT",
   "scripts": {
