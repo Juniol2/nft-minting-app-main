@@ -1,0 +1,497 @@
+/*------------------------Start Accordion Color ----------------------------------------------*/ 
+:root{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*{
+  text-decoration: none;
+  color:white;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.menu{
+  width: 700px;
+  height: auto;
+  background: #162447;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+  display: block;
+  margin: auto;
+}
+
+.menu .btn{
+  display:block;
+  padding: 1rem;
+  border-bottom: solid 1px #1b1b2f;
+  border-top: solid 1px #1f4068;
+  position: relative;
+}
+
+.menu .submenu {
+  background: #1b1b2f;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .8s ease-out;
+}
+
+.menu .submenu a{
+  display:block;
+  padding: 1rem;
+  position: relative;
+}
+
+.menu .submenu a::before{
+  content:'';
+  display:block;
+  position: absolute;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 5px;
+  background: #e43f5a;
+  opacity: 0;
+  transition: all .5s;
+}
+
+.menu .submenu a:hover{
+  padding-left: calc(1rem + 5px);
+}
+
+.menu .submenu a:hover::before{
+  opacity: 1;
+}
+
+.item:target .submenu{
+  max-height: 20rem;
+}
+
+/*------------------------END Accordion Color ----------------------------------------------*/ 
+
+/*------------------------ Color ----------------------------------------------*/ 
+:root {
+  --primary: #000000;
+  --primary-text: #ffffff;
+  --secondary: #ff1dec;
+  --secondary-text: #ffffff;
+  --accent: #505050;
+  --accent-text: #ffffff;
+}
+/*------------------------ Color ----------------------------------------------*/ 
+
+/*------------------------Start menu bar----------------------------------------------*/ 
+@import url('https://fonts.googleapis.com/css?family=Oswald:500');
+.back{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 10%;
+  background:#16151b;
+  
+}
+.thx{
+  position: fixed;
+  left:50%;
+  transform:translateX(-50%);
+  bottom: 15px;
+}
+nav{
+  width: 100%;
+  position: fixed;
+  top:50px;
+  text-align:center;
+}
+nav a{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:500;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:#ffffff;
+  margin:0 20px;
+  font-size:16px;
+  letter-spacing:1px;
+  position:relative;
+  display:inline-block;
+}
+nav a:before{
+  content:'';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background:#ff1dec;
+  top:47%;
+  animation:out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+nav a:hover:before{
+  animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+
+}
+@keyframes in{
+  0%{
+    width: 0;
+    left:0;
+    right:auto;
+  }
+  100%{
+    left:0;
+    right:auto;
+    width: 100%;
+  }
+}
+@keyframes out{
+  0%{
+    width:100%;
+    left: auto;
+    right: 0;
+  }
+  100%{
+    width: 0;
+    left: auto;
+    right: 0;
+  }
+}
+@keyframes show{
+  0%{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@for $i from 1 through 5 {
+  nav a:nth-child(#{$i}){
+    animation:show .2s #{$i*0.1+1}s ease 1 both;
+  }
+}
+/*------------------------End menu bar----------------------------------------------*/ 
+
+/*------------------------Start left Text----------------------------------------------*/ 
+.left{ background: #000000; }
+.testimonial .pic{
+    width: 22%;
+    padding: 20px 0;
+    margin: 0 6% 0 2%;
+    float: left;
+    position: relative;
+    z-index: 1;
+    left: 250px;
+    
+}
+.testimonial .pic:before,
+.testimonial .pic:after{
+    content: "";
+    width: 130px;
+    height: 150px;
+    background: #e1c37d;
+    position: absolute;
+    z-index: -1;
+}
+.testimonial .pic:before{
+    top: 0;
+    right: -20px;
+}
+.testimonial .pic:after{
+    bottom: 0;
+    left: -20px;
+}
+.testimonial .pic img{
+    width: 100%;
+    height: auto;
+    border: 3px solid #e1c37d;
+}
+.testimonial .testimonial-content{
+    width: 30%;
+    float: left;
+    /*background: #d81c1c;*/
+    position: relative;
+    left: 250px;
+}
+.testimonial .title{
+    display: block;
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    padding-top: 65px;
+    padding-left: 15px;
+}
+.testimonial .post{
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    padding-left: 15px;
+}
+.testimonial .description{
+    font-size: 16px;
+    color: #fff;
+    padding: 0 15px;
+    margin: 0;
+    position: relative;
+}
+.owl-theme .owl-controls{
+    width: 70%;
+    margin: 0;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.owl-theme .owl-controls .owl-buttons div{
+    width: 70px;
+    height: 90px;
+    line-height: 90px;
+    background: transparent;
+    border-radius: 0;
+    opacity: 1;
+    position: relative;
+}
+.owl-prev:before,
+.owl-next:before{
+    content: "\f177";
+    font-family: "fontawesome";
+    font-size: 45px;
+    font-weight: 900;
+    color: #ddd;
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+.owl-next:before{
+    content: "\f178";
+}
+.owl-next:after{
+    content: " / ";
+    font-size: 40px;
+    color: #ddd;
+    position: absolute;
+    top: 0;
+    left: -10px;
+}
+@media only screen and (max-width: 990px){
+    .testimonial{ text-align: center; }
+    .testimonial .pic{
+        width: 200px;
+        margin: 0 auto;
+        float: none;
+    }
+    .testimonial .pic:before,
+    .testimonial .pic:after{
+        width: 80px;
+        height: 100px;
+    }
+    .testimonial .testimonial-content{
+        width: 100%;
+        float: none;
+    }
+    .testimonial .title{
+        padding: 15px 0 0 0;
+    }
+    .testimonial .post{
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    .owl-theme .owl-controls{
+        width: 100%;
+        position: static;
+        text-align: center;
+    }
+    .owl-theme .owl-controls .owl-buttons div{
+        height: 50px;
+        line-height: 50px;
+    }
+}
+/*------------------------End left Text----------------------------------------------*/
+
+/*------------------------Start right Text----------------------------------------------*/
+
+.right{ background: #000000; }
+.testimonialright .pic{
+    width: 22%;
+    padding: 20px 0;
+    margin: 0 6% 0 2%;
+    float: right;
+    position: relative;
+    z-index: 1;
+    right: 250px;
+}
+.testimonialright .pic:before,
+.testimonialright .pic:after{
+    content: "";
+    width: 130px;
+    height: 150px;
+    background: #e1c37d;
+    position: absolute;
+    z-index: -1;
+}
+.testimonialright .pic:before{
+    top: 0;
+    right: -20px;
+}
+.testimonialright .pic:after{
+    bottom: 0;
+    left: -20px;
+}
+.testimonialright .pic img{
+    width: 100%;
+    height: auto;
+    border: 3px solid #e1c37d;
+}
+.testimonialright .testimonial-content{
+    width: 30%;
+    float: right;
+    /*background: #d81c1c;*/
+    position: relative;
+    right: 480px;
+}
+.testimonialright .title{
+    display: block;
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    padding-top: 65px;
+    padding-left: 15px;
+    /*text-align: center; */
+}
+.testimonialright .post{
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    /*text-align: center; */
+}
+.testimonialright .description{
+    font-size: 16px;
+    color: #fff;
+    padding: 0 15px;
+    margin: 0;
+    position: relative;
+    /*text-align: center; */
+}
+
+.owl-theme .owl-controls{
+    width: 70%;
+    margin: 0;
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.owl-theme .owl-controls .owl-buttons div{
+    width: 70px;
+    height: 90px;
+    line-height: 90px;
+    background: transparent;
+    border-radius: 0;
+    opacity: 1;
+    position: relative;
+}
+.owl-prev:before,
+.owl-next:before{
+    content: "\f177";
+    font-family: "fontawesome";
+    font-size: 45px;
+    font-weight: 900;
+    color: #ddd;
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+.owl-next:before{
+    content: "\f178";
+}
+.owl-next:after{
+    content: " / ";
+    font-size: 40px;
+    color: #ddd;
+    position: absolute;
+    top: 0;
+    left: -10px;
+}
+@media only screen and (max-width: 990px){
+    .testimonial{ text-align: center; }
+    .testimonial .pic{
+        width: 200px;
+        margin: 0 auto;
+        float: none;
+    }
+    .testimonial .pic:before,
+    .testimonial .pic:after{
+        width: 10px;
+        height: 100px;
+    }
+    .testimonial .testimonial-content{
+        width: 100%;
+        float: none;
+    }
+    .testimonial .title{
+        padding: 15px 0 0 0;
+    }
+    .testimonial .post{
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    .owl-theme .owl-controls{
+        width: 100%;
+        position: static;
+        text-align: center;
+    }
+    .owl-theme .owl-controls .owl-buttons div{
+        height: 50px;
+        line-height: 50px;
+    }
+}
+/*------------------------End right Text----------------------------------------------*/
+
+/*------------------------Start move pic----------------------------------------------*/
+.fade-in{
+  opacity:0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear { 
+  opacity: 1;
+}
+
+.from-left{
+  grid-colum: 2/3;
+  transform: translateX(-50%);
+}
+
+.from-right{
+  grid-colum: 3/4;
+  transform: translateX(50%);
+}
+
+.from-left,
+.from-right{
+  transition: transfrom 400ms ease-in;
+}
+.from-left.appear,
+.from-right.appear{
+  transform: translateX(0);
+}
+/*------------------------End move pic ----------------------------------------------*/
